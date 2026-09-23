@@ -1,0 +1,10 @@
+services:
+  market-collector:
+    build: .
+    container_name: market-collector
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - FRED_API_KEY=7003f91c849100425fe9a7e9a64ff373
+    command: python market_collector.py --all
