@@ -1,7 +1,0 @@
-services:
-  market-collector:
-    build: .
-    container_name: market-collector
-    working_dir: /app
-    volumes:
-      - .:/app
