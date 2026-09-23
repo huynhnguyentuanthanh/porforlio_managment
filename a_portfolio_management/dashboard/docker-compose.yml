@@ -1,0 +1,13 @@
+services:
+  dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: dashboard
+    ports:
+      - "8000:8000"
+    volumes:
+      - ..:/data
+      - .:/app
+    working_dir: /app
+    restart: unless-stopped
